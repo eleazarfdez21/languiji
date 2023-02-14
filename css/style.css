@@ -1,17 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&display=swap');
 
-@media only screen and (min-width: 0px) and (max-width: 767px){
-    .gridContainer{
-    display: grid; grid-template-areas:
-    "header header" "navIzq navDer" "parrafo parrafo"
-    "img img" "footer footer";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 70px auto 1fr 100px;
+@media(max-width: 576px){
+    .header {
+        background-color: cornflowerblue !important;
+        height: 150px !important;
     }
+    .header__nav{
+        flex-direction: column !important;
+        justify-content: space-between !important;
+    }
+    .header__wrapper{
+        flex-direction: column !important;
+    }
+    
+    .button {
+        min-width: 250px !important;
+        margin: 50px 40px !important;
+    }
+    .hero {
+        height: 40vh !important;
+    }
+    .hero__title{
+        font-size: 50px !important;
+    }
+
+    .section {
+        height: 80vh !important;
+    }
+    .section__title{
+        font-size: 30px;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+   .section__text{
+    font-size: small !important;
+   }
+   .footer{
+    flex-direction: column !important;
+    height: 40vh !important;
+   }
+   .footer__social{
+    padding-bottom: 25px;
+    display: flex ;
+    flex-direction: column !important;
+   }
+   .hero__transion{
+    width: 300px !important;
+    height: 150px !important;
+    margin: none !important;
+   }
+   .hero__seatle{
+    width: 300px !important;
+    height: 150px !important;
+    margin: none !important;
+   }
+
+
 }
-
-
-
 
 * {
     margin: 0;
@@ -26,7 +71,7 @@ a {
 
 .hero {
     background-image: url(../img/hero.jpg);
-    height: 75vh;
+    height: 60vh;
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -44,7 +89,7 @@ a {
     font-weight: 800;
     font-family: Poppins;
     text-align: center;
-    padding: 70px 20px;
+    padding: 50px 20px;
 }
 
 .hero__description {
@@ -54,32 +99,7 @@ a {
     text-align: center;
     font-weight: 450;
     text-shadow: 2px 2px 2px white;
-}
-
-.section {
-    background-image: url(../img/colina.jpeg);
-    height: 100vh;
-    width: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.section__title {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.section__text {
-    display: flex;
-    align-items: center;
-    margin: 20px 250px;
-    border: 5px;
-    font-size: 20px;
-    font-family: Poppins;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
+    padding: 10px 20px;
 }
 
 .header {
@@ -92,6 +112,7 @@ a {
     margin: 0 auto;
     padding: 0 40px;
     width: 100%;
+   
 }
 
 .header__wrapper {
@@ -105,9 +126,6 @@ a {
     margin-bottom: auto;
 }
 
-.container {
-    margin: 30px 0;
-}
 
 .button {
     background-color: cornflowerblue;
@@ -119,11 +137,21 @@ a {
     cursor: pointer;
     margin: 0px 370px;
     font-weight: 800;
-    font-family: Poppins;   
-    transition: background-color .3s ease-in-out;
+    font-family: Poppins;  
+    transition: background-color .3s ease-in-out; 
+}
+
+.container{
+    margin: 50px auto;
 }
 
 .section {
+    background-image: url(../img/colina.jpeg);
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 20px;
     padding-bottom: 50px;
     text-align: center;
@@ -132,6 +160,16 @@ a {
     justify-content: center;
     align-items: center; 
 }
+    .section__text {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-family: Poppins;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+        
+    }
+
     .section__content {
       padding: 10px; 
     }
@@ -139,6 +177,7 @@ a {
       margin: 2rem 0;
       font: normal 500;
       text-transform: uppercase;
+      font-family: Poppins;
     }
     .section__map {
         padding-top: 20px;
@@ -164,7 +203,9 @@ a {
         height: 30vh;
         width: 70%;
     }
+ 
     
+
 .footer {
     background-color: cornflowerblue;
     height: 150px;
@@ -174,4 +215,104 @@ a {
     justify-content: space-between;
     color: white;   
     font-family: Poppins;
+    flex-direction: row-reverse;
 }
+
+.hero__japones {
+    background-image: url(../img/hero.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero__transion {
+    margin: 100px auto;
+    width: 850px;
+    height: 400px;
+    display: flex;
+    background-size: cover;
+    border-radius: 50px;
+    animation-name: paseanime;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes paseanime {
+    0%{
+        background-image: url(../img/japon/casanipon.jpg);
+    }
+    14%{
+        background-image: url(../img/japon/castillo.jpg);
+    }
+    28%{
+        background-image: url(../img/japon/fuji.jpg);
+    }
+    42%{
+        background-image: url(../img/japon/kimono.jpg);
+    }
+    56%{
+        background-image: url(../img/japon/monje.jpg);
+    }
+    70%{
+        background-image: url(../img/japon/sushi.jpg);
+    }
+    84%{
+        background-image: url(../img/japon/teverde.jpg);
+    }
+    100%{
+        background-image: url(../img/japon/casanipon.jpg);
+    }
+
+}
+
+.hero__ingles {
+    background-image: url(../img/hero.jpg);
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero__seatle {
+    margin: 100px auto;
+    width: 850px;
+    height: 400px;
+    display: flex;
+    background-size: cover;
+    border-radius: 50px;
+    animation-name: inglesanime;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes inglesanime {
+    0%{
+        background-image: url(../img/englan/parque.jpg);
+    }
+    20%{
+        background-image: url(../img/englan/seattle.jpg);
+    }
+    40%{
+        background-image: url(../img/englan/uni.jpg);
+    }
+    60%{
+        background-image: url(../img/englan/uni1.jpg);
+    }
+    80%{
+        background-image: url(../img/englan/velero.jpg);
+    }
+    100%{
+        background-image: url(../img/englan/parque.jpg);
+    }
+
+}
+
